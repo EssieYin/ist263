@@ -1,0 +1,20 @@
+a {color: orange;}
+
+body {
+    color : black;
+    font-size : 1em;
+    font-family :Georgia, 'Times New Roman', Times, serif;
+    }
+
+h1, h2 {color:darkviolet}
+h1 {font-size: 4 em;}
+h2 {font-size: 3 em;}
+
+#title {
+    font-size : 2em;
+    color :navy;
+}
+
+.evenrow {
+    background-color:pink;
+}
