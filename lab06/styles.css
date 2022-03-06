@@ -10,10 +10,6 @@ h1, h2 {color:darkviolet}
 h1 {font-size: 4 em;}
 h2 {font-size: 3 em;}
 
-#title {
-    font-size : 2em;
-    color :navy;
-}
 
 .evenrow {
     background-color:pink;
