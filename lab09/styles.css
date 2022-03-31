@@ -1,0 +1,95 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    }
+
+
+    table, th, td {
+    border: 1px solid black;
+    }
+    
+    .evenrow {
+        background-color: violet;
+    }
+
+    .mainheading {
+            width: 30%;
+            margin: 0 auto;
+    }
+
+    nav {
+        background-color: #94B49F;
+        margin-bottom: 30px
+    }
+    nav a {color: #2C3333;}
+    nav a:hover {background-color: #F5F5F5;}
+
+    p {
+        color : #789395;
+    }
+
+    a {color: #B4CFB0} 
+    h1 {color: #062C30}
+    h2 {color:#062C30}
+
+    .motto {float:right}
+    .copyright {float:left}
+
+    .img1 {
+        float : left;
+        margin-right: 30px;
+    }
+
+    .clear{clear:both;}
+
+
+    .Address {
+        display: flex; 
+        margin : 30px;
+        background-color: #e9e1e1;
+        border-radius: 25px;
+    }
+        .address1 {
+            order : 1; 
+            padding: 30px;
+            }
+        .address2 {order : 2;
+            margin-top: 90px;
+            margin-left: 90px;
+        }
+
+
+    .part2 {
+        display: flex;
+        margin: 30px;
+        background-color: #e9e1e1;
+        border-radius: 25px;
+    }
+        .form {
+            order : 1; 
+            padding : 30px
+            }
+        .map {
+            order : 2;
+            margin-left: 100px;
+        }
+
+.map {float: right;}
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
