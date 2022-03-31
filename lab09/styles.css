@@ -16,6 +16,11 @@ body {
             margin: 0 auto;
     }
 
+    .skillicon {
+        width:128px;
+        height:128px
+    }
+
     nav {
         background-color: #94B49F;
         margin-bottom: 30px
