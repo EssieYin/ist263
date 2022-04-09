@@ -1,0 +1,56 @@
+<!-- form is really ubiquitous on the web
+and for example 
+amazon's search box-->>
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset = 'utf-8'>
+        <title>Week 4 Forms</title>
+    </head>
+    <body>
+
+        <!--action says what webpage will process form post says how data will be sent-->
+       <!--<form action = "mailto: myin08@syr.edu" method = "post">   ---  the mail to action only works with POST method--> 
+        <!-- we rarely use mail to because it need another submit commitment and it is troublesome and confusing-->
+        <form action = "" method = "post"> 
+            
+           <!-- label tells user what to enter for links the label to the form element value in for must match value in input id-->
+           <label for="fullname">Full Name</label> <br>
+           <input type = "text" id = "fullname" name = "fullname"> <br>
+
+           <label for="complaint">Complaints</label> <br>
+           <textarea name = "complaint" id = "complaint"></textarea> <br>
+            
+           <!-- radio buttons are lined with the same name id values must be unique -->
+           <label for = "important1">important</label>
+           <input type = "radio" id = "important1" name = "important"> <br>
+           <label for = "important2">important</label>
+           <input type = "radio" id = "important2" name = "important"> <br>
+
+           <p>What contact methods work?</p>
+           <label for = "method1">phone</label>
+           <input type = "checkbox" id="method1" name = "method1">
+           <label for = "method2">email</label>
+           <input type = "checkbox" id="method2" name = "method2"><br>
+
+           <label for="time">What time do you wanted to be contacted?</label>
+           <select id = "time" name = "time">
+               <option value = "morning">morning</option>
+               <option value = "afternoon">afternoon</option>
+               <option value = "evening">evening</option> 
+           </select> <br>
+
+           <input type = "submit" value = "send complaint">
+       </form>
+
+
+    </body>
+
+
+
+
+
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content = "IE=Edge">
+        <title>Document</title>
+        <style>
+           body {font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
+           .nav1{
+               display: flex;
+               background-color: #000000;
+            color: #ffffff;
+            justify-content: flex-end; /*this property must be with the flex row*/
+            }
+            .nav1 div, .nav2 div { /* grouped descendant selector*/
+                margin:10px;
+            }
+
+            .nav2 div, .nav3 div { /* grouped descendant selector*/
+                margin:10px;
+            }
+
+            .nav2{
+               display: flex;
+               background-color: #000000;
+            color: #ffffff;
+            margin-top: 10px;
+            }
+
+            .nav3{
+               display: flex;
+               background-color: #000000;
+            color: #ffffff;
+            margin-top: 10px;
+            justify-content: space-around; /*this property must be with the flex row*/
+            }
+
+
+            .nav4 {
+                display: flex;
+                background-color: black;
+                color: white;
+                margin-top: 10px;
+                justify-content: space-between;
+            }
+
+            .nav div{
+                margin: 10px;
+            }
+            .nestedflexbox1, .nestedflexbox2{
+                display: flex;
+                margin: 10px;
+            }
+
+
+
+        </style>
+    </head>
+    <body>
+        <!--flex end-->
+        <div class = "nav1">
+            <div>Home</div>
+            <div>About Us</div>
+            <div>Products</div>
+            <div>Contact</div>
+        </div>
+
+        
+        <div class = "nav2">
+            <div>Home</div>
+            <div>About Us</div>
+            <div>Products</div>
+            <div>Contact</div>
+        </div>
+
+        <!--Space Around-->
+        <div class = "nav3">
+            <div>Home</div>
+            <div>About Us</div>
+            <div>Products</div>
+            <div>Contact</div>
+        </div>
+
+        <div class = "nav4">
+            <div>
+                <div class="nestedflexbox1">
+                    <div>Home</div>
+                    <div>About Us</div>
+                    <div>Products</div>
+                    <div>Contact</div>
+                </div>
+            </div>
+            <div>
+                <div class = "nestedflexbox2">
+                    <div>Facebook</div>
+                    <div>Twitter</div>
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+</html>
