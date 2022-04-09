@@ -1,0 +1,39 @@
+body {
+    color : yellow;
+    font-size : 4em;
+    font-family :Georgia, 'Times New Roman', Times, serif;
+    }
+
+    /* fonts load off user's computer if the font isn't on their machine it will not load*/
+p {
+    color : red;
+    line-height:2em;
+    /*line height controls space between lines*/
+    text-align: center;
+}
+
+#mainparagraph{
+    color: gray;
+}
+/* only going to style the element with id = "mainparagraph" d */
+
+
+ul{
+    color: green;
+    list-style-type: square;
+}
+/* above we've used the em unit of measurement 1 is default browser size anything larger is a percentage more. */
+/* 1.1 is 10% larger */
+
+a {color: orange;}
+
+p a {color: pink;}
+/* descendant selector will only style a tags inside of p tags*/
+
+
+.oddli{
+    color:gray;
+}
+
+
+
