@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility</title>
+    <style>
+        /*
+        Skip to Content
+        1. html link that says skip to content
+        2. need an anchor
+        3. style my skip to content
+        4. hide and show it (positionint)
+        */
+        #skip{ /* #sign means looking for tag with id or skip */
+            position: absolute;
+            left: -999px; /* put it out of the screen */
+            background-color: orange;
+            padding:5px;
+        }
+        #skip:focus{
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <!-- tabindex is an attribute, it changes the order the tab key selects links-->
+        <a href="#content" id="skip">Skip to Content</a>
+        <a href="http://www.twitter.com" tabindex="4">Twitter</a> |
+        <a href="index.html">Home</a> |
+        <a href="skills.html">Skills</a> |
+        <a href="contact.html">Contact</a> 
+    </nav>
+    <!--heading tags are about hierachy-->
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <h1>Accessibility</h1>  <!--Only one per page-->
+    <h2>Tab Order</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+        <h2>Semantics Tags</h2>
+        <h3>aside</h3>
+        <h3 id = "content">article</h3>
+</body>
+</html>
