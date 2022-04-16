@@ -124,6 +124,8 @@ body {
 
 .map {float: right;}
 
+.address2 a {color: purple;}
+
 #skip{ /* #sign means looking for tag with id or skip */
     position: absolute;
     left: -999px; /* put it out of the screen */
