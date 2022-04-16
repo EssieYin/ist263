@@ -125,6 +125,7 @@ body {
 .map {float: right;}
 
 .address2 a {color: purple;}
+.form p {color: navy;}
 
 #skip{ /* #sign means looking for tag with id or skip */
     position: absolute;
