@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: black;
+            color: white;
+            margin: 10px;
+        }
+        .navatend{
+            display: flex;
+            justify-content: flex-end;
+        }
+        .navspacearound{
+            display: flex;
+            justify-content: space-around;
+        }
+        .navspacebetween{
+            display: flex;
+            justify-content: space-between;
+        }
+        .navtwocol, .nestedflexbox1, .nestedflexbox2 {
+            display: flex;
+        }
+        .navtwocol{
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div class = "navatend">
+        <div>Home</div>
+        <div>About Us</div>
+        <div>Products</div>
+        <div>Contact</div>
+    </div>
+
+    <div class = "navspacearound">
+        <div>Home</div>
+        <div>About Us</div>
+        <div>Products</div>
+        <div>Contact</div>
+    </div>
+
+    <div class = "navspacebetween">
+        <div>Home</div>
+        <div>About Us</div>
+        <div>Products</div>
+        <div>Contact</div>
+    </div>
+
+    <div class = "navtwocol"> <!-- this is our first flexbox -->
+        <div class = "nestedflexbox1">                  <!-- this is the second flexbox, also 1st column for first flexbox-->
+            <div>Home</div>
+            <div>About Us</div>
+            <div>Products</div>
+            <div>Contact</div>
+        </div>
+        <div class = "nestedflexbox2">
+            <div>Facebook</div>
+            <div>Twitter</div>
+        </div>
+    </div>
+</body>
+</html>

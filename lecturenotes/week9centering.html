@@ -8,16 +8,27 @@
             .centeredtext{
                 text-align: center; /*only centers inline content. */
                 border: 1px solid red;
+                width: 50%;
             }
             .blockcentered{
                 border:1px dashed blue;
-                width: 30%;
-                margin: 0 auto;
+                width: 30%; /*The width of the box*/
+                margin: 0 auto; /*first value of 0 is margin for top and bottom, the second value is for left and right*/
             }
             .flexcentering {
                 border: 1px dotted green;
                 display: flex;
+                justify-content:center; /*always set justify content on the same selector that is display flex*/
+            }
+
+            .centerflex {
+                border: 1px dotted green;
+                display: flex;
                 justify-content:center;
+            }
+            .centerflex div {
+                flex: 1; /* make all children divs (flex columns) same size*/
+                border: 1px solid;
             }
         </style>
     </head>
@@ -25,7 +36,13 @@
         
         <p class = "centeredtext">This technique centers inline content.</p>
         <div class = "blockcentered">This technique center bolock elements.</div>
+        <br>
         <div class = "flexcentering">This flexbox hack for centering.It is my favourite.</div>
-
+        <br>
+        <div class = "centerflex">
+        <div>1</div>
+        <div>This flexbox hack for centering.It is my favourite.</div>
+        <div>3</div>
+        </div>
     </body>
 </html>
