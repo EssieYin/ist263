@@ -17,6 +17,7 @@ body {
     .sentence{
         margin: 30px;
         }
+    .sentence p {color: #062C30;}
 
     .skills {
         display: flex;
