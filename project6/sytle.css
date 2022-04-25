@@ -12,7 +12,7 @@ body {
     #skip{ /* #sign means looking for tag with id or skip */
     position: absolute;
     left: -999px; /* put it out of the screen */
-    background-color: orange;
+    background-color: navy;
     padding:5px;
     }
     #skip:focus{
