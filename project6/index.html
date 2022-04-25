@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>Cantopop</title>
+        <link rel = "stylesheet" href = "style.css">
+        <style>
+            body {
+            font-family:Arial, Helvetica, sans-serif;
+            }
+            nav{
+                display: flex;
+                flex-wrap: wrap;
+                background-color: #023047;
+                color:#fb8500; 
+                padding: 2em;
+                font-size: 1.2em;
+            }
+            #skip{ /* #sign means looking for tag with id or skip */
+            position: absolute;
+            left: -999px; /* put it out of the screen */
+            background-color: orange;
+            padding:5px;
+            }
+            #skip:focus{
+                left: 10px;
+            }
+            a{color:#fb8500}
+            .home{flex:3;}
+            .myLinks{flex:1}
+
+            .homepagepicture{width: 100%;}
+
+            h2{
+                text-align: center; /*only centers inline content. */
+            }
+            .picturenav{
+                display:flex;
+                justify-content:center;
+                flex-wrap: wrap;
+            }
+            .picturenav a {margin: 5px;}
+
+            @media only screen and (max-width: 800px) {
+                nav a {
+                    display:block;
+                    width: 100%;
+                    padding: 10px;
+                    }
+                span{display: none;}
+                }
+        </style>
+
+    </head>
+    
+
+    <body> 
+        <nav>
+            <!-- Top Navigation Menu -->
+                <div class = "home">
+                <a href="#home" class="active">Cantopop / Cantonese Pop Music (Hongkong Pop Music)</a>
+                </div>
+                <div id="myLinks"></div>
+                    <a href="#content" id="skip">Skip to Content</a>
+                    <a href="history.html">History</a> <span>|</span>
+                    <a href="singer.html">Famous Singers</a> <span>|</span>
+                    <a href="producer.html">Famous Producers</a>
+                </div>
+        </nav>
+            
+        <header>
+        <img src = "../prijmedia/Cantopop_Homepage2.jpeg" alt = "Homepage Picture" class ="homepagepicture" width = 1200px height="800">
+        </header>
+
+        <main>
+        <h2>About Cantopop</h2>
+
+        <div class="picturenav">
+        <a href = "history.html"><img src="../prijmedia/hong-kong-2291752.jpg" alt = "History" width="300" height="250"></a>
+        <a href = "singer.html"><img src="../prijmedia/Leslie Cheung.jpeg" alt = "Singers" width="300" height="250"></a>
+        <a href = "producer.html"><img src="../prijmedia/Wyman Wong.jpeg" alt = "Producers" width="300" height="250"></a>
+        </div>
+
+        </main>
+
+
+    </body>
+
+</html>
