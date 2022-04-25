@@ -20,14 +20,13 @@ body {
     }
     a{color:#fb8500}
     nav a:hover {background-color: #F5F5F5;}
+
     .home{flex:3;}
     .myLinks{flex:1}
 
     .homepagepicture{width: 100%;}
 
-    h2{
-        text-align: center; /*only centers inline content. */
-    }
+    h2{text-align: center; /*only centers inline content. */}
     .picturenav{
         display:flex;
         justify-content:center;
@@ -36,7 +35,7 @@ body {
     .picturenav a {margin: 5px;}
 
     @media only screen and (max-width: 800px) {
-        nav a {
+        .active, .nav1, .nav2, .nav3 {
             display:block;
             width: 100%;
             padding: 10px;
