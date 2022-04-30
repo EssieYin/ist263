@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript Part 2</title>
+        <!--
+            1.hamburger does not display when screen is large
+            2.display hamburger when screen is small
+
+            3.nav across screen at large
+            4.nav stacks when small
+            5.nav hides when screen is small
+            
+            6.when they click on the hamburger nav shows
+        -->
+        <style>
+           #hamburger {
+               width: 40px;
+               display: none;
+        }
+        #navlinks a {
+            background-color: brown;
+            padding: 10px;
+            margin: 5px;
+        }
+        @media only screen and (max-width:600px) {
+            #hamburger {display:block;}
+            #navlinks a {display: block;} /*stack the nav links*/
+            #navlinks {display: none;}
+        }
+        </style>
+        <script>
+            function toggleNav () {
+                /* check if the nav is on*/
+                if (document.getElementById("navlinks").style.getPropertyValue("display") == 'block') {
+                    document.getElementById("navlinks").style.display = "none";
+                }
+                else {
+                    document.getElementById("navlinks").style.display = "block";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <nav>
+            <img src="https://laferger.github.io/ist263/images/hamburger.png" alt="hamburger icon" id="hamburger" onclick="toggleNav();">
+            <div id="navlinks">
+                <a href=" ">Home</a > 
+                <a href="skills.html">Skills</a > 
+                <a href="contact.html">Contact</a >
+            </div>
+        </nav>
+
+        
+       
+    </body>
+</html>

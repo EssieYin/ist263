@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week13Participation</title>
+    <script>
+        
+         function Right () {
+            document.getElementById("rightanswer").innerHTML = "Goodjob. True is correct";
+            document.getElementById("pagecolor").style.backgroundColor = "green";
+        }
+        function Wrong () {
+            document.getElementById("wronganswer").innerHTML = "False is not correct"
+        }
+
+    </script>
+</head>
+<body id="pagecolor">
+    <p>iSchool is in Syracuse University</p >
+    <p id="rightanswer" onclick="Right();">True</p >
+    <p id="wronganswer" onclick="Wrong();">False</p >
+</body>
+</html>
