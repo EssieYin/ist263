@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview</title>
+    <style>
+        
+        /*Here is about the hamburger nav*/
+        /* CSS Reset */
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        header{
+            background-color: #262626;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            color:white;
+            text-decoration: none;
+        }
+
+        /*Style the element one by one*/
+
+        .navbar{
+            min-height:70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /*The align-items property specifies the default alignment for items inside the flexible container.*/
+            padding: 0 24px; 
+           /* 24 px padding on the left and the right*/
+        }
+        .nav-menu{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 60px; 
+            /*we dont want our links so close together so we're going to use a gap of 60pixels*/
+        }
+
+        .nav-branding{
+            font-size : 2rem; 
+        }
+
+        /* hover effect */
+        .nav-link{
+            transition: 0.7s ease;
+        }
+        /* To create a transition effect, you must specify two things: the CSS property you want to add an effect to and the duration of the effect */
+
+        .nav-link:hover{
+            color: dodgerblue;
+        }
+        /*hover effect*/
+
+
+        .hamburger{
+            display: none; /* We dont want the hamburger to display */
+            cursor: pointer;
+        }
+
+        .bar{
+            display: block; /* We want them to stack on top of each other and we're going to use display block */
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            /* 5px on the top and bottom and auto on the left and on the right */
+            transition : all 0.3s ease-in-out;
+            background-color: white;
+        }
+
+
+        @media only screen and (max-width: 768px){
+            .hamburger{
+                display: block;
+            }
+            /* We are going to active this with javascript */
+            .hamburger.active .bar:nth-child(2){ /*for bar 2*/
+                opacity: 0;
+            }
+            .hamburger.active .bar:nth-child(1){
+                transform: translateY(8px) rotate(45deg); /* we will stack 2 property together */
+            }
+            .hamburger.active .bar:nth-child(3){
+                transform: translateY(-8px) rotate(-45deg);
+            }
+
+            .nav-menu{
+                position: fixed; /*this is gonna ensure that when we scroll down, the menu remains on the screen*/
+                /*so it's not gonna stay on the top, it's going to remain on the screen until you click on one of the link or when you click on this again*/
+                left: -100%; /*hide it and let it display out of the screen*/
+                top: 70px;  /* for header --> min-height:70px; */
+                gap: 0;
+                flex-direction: column; /* before, we let it display flex */
+                background-color: var(--primary);
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-item{
+                margin:16px 0;
+            }
+            .nav-menu.active{
+                left:0;  /* Whenever we active the menu bar, we want to display the menu */
+            }
+        }
+        /*Above is about the hamburger nav*/
+    </style>
+
+    <script>
+        /* const 用于声明一个或多个常量，声明时必须进行初始化，且初始化后值不可再修改：*/
+        /* The Query Selector method returns the first element that matches a CSS selector. */
+        /* To return all matches (not only the first), use the querySelectorAll() instead. */
+        
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        })
+        document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }))
+
+    
+    </script>
+
+</head>
+
+<body>
+
+    <!--Here I am going to put the Hamburger Navigation-->
+    <header>
+        <nav class = 'navbar'>
+            <a href = '#home' class = 'nav-branding'>DEV</a>
+
+            <ul class = 'nav-menu'>
+                <li class = 'nav-item'>
+                    <a href = '#home' class = 'nav-link'>Home</a>
+                </li>
+                <li class = 'nav-item'>
+                    <a href = 'review1.html' class = 'nav-link'>About</a>
+                </li>
+                <li class = 'nav-item'>
+                    <a href = 'review2.html' class = 'nav-link'>Contact</a>
+                </li>
+            </ul>
+
+            <div class = 'hamburger'>
+                <span class = 'bar'></span>
+                <span class = 'bar'></span>
+                <span class = 'bar'></span>
+            </div>
+
+        </nav>
+    </header>
+
+</body>
+</html>
