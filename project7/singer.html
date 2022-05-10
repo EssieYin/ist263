@@ -1,49 +1,216 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Boostrap CSS -->
+    <!--Bootstrap CSS-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     
-    <link rel = "stylesheet" href = "styles.css">
+    <title>Cantopop Singer</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif; 
+            background-color: #000000;
+            color: #ffffff;
+        }
+        #slideshow-container {
+            background-color: #000000;
+            width: 80%;
+            margin: 80px auto; /* margin auto is centering this container */ 
+        }
 
-    <title>Cantopop</title>
+        #bigimages {
+            margin-right: 50px;
+            display:block;
+            float: left;
+            padding-top: 15px;
+        }
 
-    
+        #bigimages img {
+            width: 100%;
+        }
+        #singerinfo {
+            display: block;
+            padding-top: 15px;
+        }
+        #thumbnails {
+            width: 80%; 
+            margin: auto; 
+            padding-top: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        } 
+        /* ^^ margin auto is centering this container */
+        #easonchanthumb, #lesliecheungthumb, #anitamuithumb, #jackycheungthumb, #mariamyeungthumb, #joeyyungthumb, #leokoothumb, #hinscheungthumb 
+        {width: 100px;}
+
+        #lesliecheung,#anitamui,#jackycheung,#mariamyeung,#joeyyung,#leokoo,#hinscheung,#lesliecheunginfo,#anitamuiinfo,#jackycheunginfo,#mariamyeunginfo,#joeyyunginfo,#leokooinfo,#hinscheunginfo{display: none;} /*Only Keep Eason Chan*/
+        #thumbnails{clear: both;}       
+    </style>
+    <script>
+       function InfosOff(){ 
+        document.getElementById('easonchan').style.display='none';
+        document.getElementById('lesliecheung').style.display='none';
+        document.getElementById('anitamui').style.display='none';
+        document.getElementById('jackycheung').style.display='none';
+        document.getElementById('mariamyeung').style.display='none';
+        document.getElementById('joeyyung').style.display='none';
+        document.getElementById('leokoo').style.display='none';
+        document.getElementById('hinscheung').style.display='none';
+        document.getElementById('easonchaninfo').style.display='none';
+        document.getElementById('lesliecheunginfo').style.display='none';
+        document.getElementById('anitamuiinfo').style.display='none';
+        document.getElementById('jackycheunginfo').style.display='none';
+        document.getElementById('mariamyeunginfo').style.display='none';
+        document.getElementById('joeyyunginfo').style.display='none';
+        document.getElementById('leokooinfo').style.display='none';
+        document.getElementById('hinscheunginfo').style.display='none';
+        }
+        
+        function EasonChanOn(){
+        document.getElementById('easonchan').style.display = 'block';
+        document.getElementById('easonchaninfo').style.display = 'block';
+        }
+        function LeslieCheungOn(){
+        document.getElementById('lesliecheung').style.display = 'block';
+        document.getElementById('lesliecheunginfo').style.display = 'block';
+        }
+        function AnitaMuiOn(){
+        document.getElementById('anitamui').style.display = 'block';
+        document.getElementById('anitamuiinfo').style.display = 'block';
+        }
+        function JackyCheungOn(){
+        document.getElementById('jackycheung').style.display = 'block';
+        document.getElementById('jackycheunginfo').style.display = 'block';
+        }
+        function MariamYeungOn(){
+        document.getElementById('mariamyeung').style.display = 'block';
+        document.getElementById('mariamyeunginfo').style.display = 'block';
+        }
+        function JoeyYungOn(){
+        document.getElementById('joeyyung').style.display = 'block';
+        document.getElementById('joeyyunginfo').style.display = 'block';
+        }
+        function LeoKooOn(){
+        document.getElementById('leokoo').style.display = 'block';
+        document.getElementById('leokooinfo').style.display = 'block';
+        }
+        function HinsCheungOn(){
+        document.getElementById('hinscheung').style.display = 'block';
+        document.getElementById('hinscheunginfo').style.display = 'block';
+        }
+    </script>
 </head>
 <body>
-    
-<header>
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
 
-  <a class="navbar-brand" href="#">Cantopop</a>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="#">Cantopop</a>
+      
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="history.html">History</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Singers<span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+        </div>
+    </nav>
 
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<!-- Start The SlideShow -->
 
-  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="index.html">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="history.html">History</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Singers<span class="sr-only">(current)</span></a>
-      </li>
-    </ul>
-  </div>
-</nav>
+<div id="slideshow-container">
 
-</header>
+    <div id="thumbnails">
+        <img src="../singerslideshow/easonchan.jpeg" alt="Eason Chan" id="easonchanthumb" onclick="InfosOff(); EasonChanOn();">
+        <img src="../singerslideshow/lesilecheung.jpeg" alt="Leslie Cheung" id="lesliecheungthumb" onclick="InfosOff(); LeslieCheungOn();">
+        <img src="../singerslideshow/anitamui.jpeg" alt="Anita Mui" id="anitamuithumb" onclick="InfosOff(); AnitaMuiOn();">
+        <img src="../singerslideshow/jackycheung.jpeg" alt="Jacky Cheung" id="jackycheungthumb"
+        onclick="InfosOff(); JackyCheungOn();">
+        <img src="../singerslideshow/mariamyeung.jpeg" alt="Mariam Yeung" id="mariamyeungthumb"
+        onclick="InfosOff(); MariamYeungOn()">
+        <img src="../singerslideshow/joeyyung.jpeg" alt="Joey Yung" id="joeyyungthumb" onclick="InfosOff(); JoeyYungOn();">
+        <img src="../singerslideshow/leokoo.jpeg" alt="Leo Koo" id="leokoothumb" onclick="InfosOff(); LeoKooOn();">
+        <img src="../singerslideshow/hinscheung.jpeg" alt="Hins Cheung" id="hinscheungthumb" onclick="InfosOff(); HinsCheungOn();">
+    </div>
 
 
+    <div id="bigimages">
+        <img src="../singerslideshow/easonchan.jpeg" alt="Eason Chan" id="easonchan">
+        <img src="../singerslideshow/lesilecheung.jpeg" alt="Leslie Cheung" id="lesliecheung">
+        <img src="../singerslideshow/anitamui.jpeg" alt="Anita Mui" id="anitamui">
+        <img src="../singerslideshow/jackycheung.jpeg" alt="Jacky Cheung" id="jackycheung">
+        <img src="../singerslideshow/mariamyeung.jpeg" alt="Mariam Yeung" id="mariamyeung">
+        <img src="../singerslideshow/joeyyung.jpeg" alt="Joey Yung" id="joeyyung">
+        <img src="../singerslideshow/leokoo.jpeg" alt="Leo Koo" id="leokoo">
+        <img src="../singerslideshow/hinscheung.jpeg" alt="hinscheung" id="hinscheung">
+    </div>
+    <div id="singerinfo">        
+        <h1>Singers' Introduction</h1>
+        <div id="easonchaninfo">
+            <h2>Eason Chan</h2>
+            <p>Eason Chan Yik-shun (Chinese: 陳奕迅) is a Hong Kong singer and actor. Eason Chan has been praised by Time magazine as a front runner in the next generation of Cantopop. He was third Hong Kong singer to be called the "god of songs" after Samuel Hui and Jacky Cheung. In 2012, Time Out Hong Kong crowned Chan as the "King of Asian Pop".</p>
+        </div>
+        <div id="lesliecheunginfo">
+            <h2>Leslie Cheung</h2>
+            <p>
+                Born Cheung Fat-chung in Kowloon, Cheung studied in England from the age of 12 until returning to Hong Kong in 1976 to pursue a career in show business. He achieved wide popularity with his 1984 self-titled album and its single &quot;Monica&quot;, whose upbeat dance production introduced a new popular trend to Cantopop in addition to the contemporary pool of sentimental ballads. Cheung's continued success with a string of hit albums in the mid- and late-1980s, most notably 1987 best-seller Summer Romance, won him numerous awards, including Most Popular Male Artist at the 1988 and 1989 Jade Solid Gold Best Ten Music Awards. In addition to music, Cheung had breakthrough film roles as a disillusioned teenager in Nomad (1982) and as a police officer torn between justice and brotherhood in A Better Tomorrow (1986). He announced his &quot;retirement&quot; from music and emigrated to Canada in 1989, but remained active in his burgeoning acting career.
+            </p>
+        </div>
+        <div id="anitamuiinfo">
+            <h2>Anita Mui</h2>
+            <p>
+                Anita Mui Yim-fong (Chinese: 梅艷芳; 10 October 1963 – 30 December 2003) was a Hong Kong singer and actress who made major contributions to the Cantopop music scene and received numerous awards and honours. She remained an idol throughout her career, and is regarded as a Cantopop diva. She was dubbed as the "daughter of Hong Kong" and is considered one of the most iconic Cantopop singers.
+            </p>
+            <p>
+                Mui once held a sold-out concert in Hammersmith, London, England, where she was dubbed the "Madonna of the East", which brought her to further international fame. That title stayed with her throughout her career, in both Eastern and Western media. 
+            </p>
+        </div>
+        <div id="jackycheunginfo">
+            <h2>Jacky Cheung</h2>
+            <p>
+                Jacky Cheung Hok-yau (born 10 July 1961) is a Hong Kong singer, songwriter and actor. Dubbed the “God of Songs”,he is considered by the media as one of the “Four Heavenly Kings” of Hong Kong pop music. Cheung is known for his technically skilled vocals, lengthy tours, multimillion-selling album The Goodbye Kiss and his personal Private Corner album project, for which he coined the phrase 'Canto-jazz . His successful music and acting career has made Cheung one of Hong Kong's icons. He was elected by Time Magazine as one of the “25 most influential people in the New Hong Kong”
+            </p>
+        </div>
+        <div id="mariamyeunginfo">
+            <h2>Mariam Yeung</h2>
+            <p>
+                Yeung joined the entertainment industry after coming third in a singing competition in 1995 and now has more than 35 albums to her name.
+            </p>
+            <p>
+                She is also a successful actress, winning a best actress award for her role in Love in the Buff in 2013.
+            </p>
+        </div>
+        <div id="joeyyunginfo">
+            <h2>Joey Yung</h2>
+            <p>Joey Yung (Chinese: 容祖兒; pinyin: Róng zǔer; Jyutping: Jung4 Zou2 Ji4; born 16 June 1980) is a Hong Kong singer and Cantopop diva signed to Emperor Entertainment Group.</p>
+            <p>Since her debut in 1996, Yung has won numerous awards, including the prestigious JSG Most Popular Female Singer and Ultimate Best Female Singer – Gold awards a record-breaking nine times. She was ranked 63rd on the 2014 Forbes China Celebrity 100, making her the most influential Hong Kong-based female singer that year. In 2014, she reportedly earned HK$80 million (US$10.3 million).</p>
+        </div>
+        <div id="leokooinfo">
+            <h2>Leo Koo</h2>
+            <p>Leo Ku Kui-kei is a Hong Kong Cantopop and Mandopop singer, actor, TV host, model, cartoonist, MV director, and producer and designer. He employs falsetto as a singing technique and was named as one of the "Five Fresh Tigers of TVB". </p>
+        </div>
+        <div id="hinscheunginfo">
+            <h2>Hins Cheung</h2>
+            <p>Cheung King Hin (Chinese: 張敬軒; born 1 February 1981) mostly known professionally as Hins Cheung, is a Chinese-born Hong Kong singer, songwriter, record producer, and businessperson. He made his debut in 2001 with the studio album Hins' First. He has since released 17 studio albums and EPs. Among his various accolades, he has won the Ultimate Song Chart Awards Best Male Singer Gold prize six times, Jade Solid Gold Most Popular Male Singer four times, and Best Pop Male Singer at the Top Ten Chinese Gold Songs Awards. In 2021, he was shortlisted for Asia's Most Influential by Tatler Asia.</p>
+        </div>
+    </div>
 
+</div>
 
 
 <!-- bootstrap's java script is often put here-->
