@@ -15,41 +15,6 @@
             background-color: #000000;
             color: #ffffff;
         }
-        #slideshow-container {
-            background-color: #000000;
-            width: 80%;
-            margin: 80px auto; /* margin auto is centering this container */ 
-        }
-
-        #bigimages {
-            margin-right: 50px;
-            display:block;
-            float: left;
-            padding-top: 15px;
-        }
-
-        #bigimages img {
-            width: 100%;
-        }
-        #singerinfo {
-            display: block;
-            padding-top: 15px;
-        }
-        #thumbnails {
-            width: 80%; 
-            margin: auto; 
-            padding-top: 20px;
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        } 
-        /* ^^ margin auto is centering this container */
-        #easonchanthumb, #lesliecheungthumb, #anitamuithumb, #jackycheungthumb, #mariamyeungthumb, #joeyyungthumb, #leokoothumb, #hinscheungthumb 
-        {width: 100px;}
-
-        #lesliecheung,#anitamui,#jackycheung,#mariamyeung,#joeyyung,#leokoo,#hinscheung,#lesliecheunginfo,#anitamuiinfo,#jackycheunginfo,#mariamyeunginfo,#joeyyunginfo,#leokooinfo,#hinscheunginfo{display: none;} /*Only Keep Eason Chan*/
-        #thumbnails{clear: both;}       
     </style>
     <script>
        function InfosOff(){ 
@@ -106,7 +71,6 @@
     </script>
 </head>
 <body>
-    
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
 
         <a href="#main" class="skip">Skip to main content</a>
@@ -161,8 +125,8 @@
         <img src="../singerslideshow/leokoo.jpeg" alt="Leo Koo" id="leokoo">
         <img src="../singerslideshow/hinscheung.jpeg" alt="hinscheung" id="hinscheung">
     </div>
-    <div id="singerinfo main">        
-        <h1>Singers' Introduction</h1>
+    <div id="singerinfo">        
+        <h1 id = "main">Singers' Introduction</h1>
         <div id="easonchaninfo">
             <h2>Eason Chan</h2>
             <p>Eason Chan Yik-shun (Chinese: 陳奕迅) is a Hong Kong singer and actor. Eason Chan has been praised by Time magazine as a front runner in the next generation of Cantopop. He was third Hong Kong singer to be called the "god of songs" after Samuel Hui and Jacky Cheung. In 2012, Time Out Hong Kong crowned Chan as the "King of Asian Pop".</p>
